@@ -115,7 +115,7 @@ class SplitSizer:
 
     def n_groups(self, number_of_students):
         if self.sizer._n_groups:
-            return math.round(self._n_groups * (number_of_students/self.n_full_class))
+            return round(self.sizer._n_groups * (number_of_students/self.n_full_class))
         else:
             return self.sizer.n_groups(number_of_students)
 
